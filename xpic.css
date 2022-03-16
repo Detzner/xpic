@@ -27,7 +27,7 @@ height: 45px;
 padding-left: 220px;
 padding-top: 80px;
 width: 430px;
-background: url('reveal_header_easier.jpg') no-repeat;
+background: url('images/reveal_header_easier.jpg') no-repeat;
 }
 
 #header_easier p, #header_harder p {
@@ -56,20 +56,20 @@ height: 45px;
 padding-left: 220px;
 padding-top: 80px;
 width: 430px;
-background: url('reveal_header_harder.jpg') no-repeat;
+background: url('images/reveal_header_harder.jpg') no-repeat;
 }
 
 #top_numbers {
 height: 50px;
 width: 650px;
-background: url('top_numbers.jpg') no-repeat;
+background: url('images/top_numbers.jpg') no-repeat;
 color: #ffffff;
 }
 
 #left_numbers {
 height: 600px;
 width: 50px;
-background:  url('left_numbers.jpg') no-repeat;
+background:  url('images/left_numbers.jpg') no-repeat;
 color: #ffffff;
 float: left;
 }
@@ -77,14 +77,14 @@ float: left;
 #top_numbers_harder {
 height: 50px;
 width: 650px;
-background: url('top_numbers_harder.jpg') no-repeat;
+background: url('images/top_numbers_harder.jpg') no-repeat;
 color: #ffffff;
 }
 
 #left_numbers_harder {
 height: 600px;
 width: 50px;
-background:  url('left_numbers_harder.jpg') no-repeat;
+background:  url('images/left_numbers_harder.jpg') no-repeat;
 color: #ffffff;
 float: left;
 }

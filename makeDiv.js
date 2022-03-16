@@ -9,7 +9,7 @@
 	function inputImage() {
 		const input = document.createElement('input');
 		input.setAttribute('type', 'image');
-		input.setAttribute('src', 'bluedot.jpg');	
+		input.setAttribute('src', 'images/bluedot.jpg');	
 		input.setAttribute('onclick','checkInput(this)');
 		return input;
 	}
