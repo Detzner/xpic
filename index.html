@@ -61,48 +61,18 @@ function changeBgd(bgdpic) {
 	<div id="header_easier"><a href="xpic_harder.html"><img src="images/reddot.jpg" style="border: none; margin-right: 8px;" alt="" /></a><p><a href="xpic_harder.html">Click here to try the harder version</a></p></div>
 	
 <div id="chart_holder">
+		
+	<div id="top-numbers-holder"></div>
 	
-	
-	<div id="top-numbers-holder">
-	<!-- 	<div id="top1" class="top-numbers"></div>
-		<div id="top2" class="top-numbers"></div>
-		<div id="top3" class="top-numbers"></div>
-		<div id="top4" class="top-numbers"></div>
-		<div id="top5" class="top-numbers"></div>
-		<div id="top6" class="top-numbers"></div>
-		<div id="top7" class="top-numbers"></div>
-		<div id="top8" class="top-numbers"></div>
-		<div id="top9" class="top-numbers"></div>
-		<div id="top10" class="top-numbers"></div>
-		<div id="top11" class="top-numbers"></div>
-		<div id="top12" class="top-numbers"></div>
-		-->
-	</div>
-	
-	<div id= "left-numbers-holder">
-	<!--
-		<div id="left1" class="left-numbers"></div>
-		<div id="left2" class="left-numbers"></div>
-		<div id="left3" class="left-numbers"></div>
-		<div id="left4" class="left-numbers"></div>
-		<div id="left5" class="left-numbers"></div>
-		<div id="left6" class="left-numbers"></div>
-		<div id="left7" class="left-numbers"></div>
-		<div id="left8" class="left-numbers"></div>
-		<div id="left9" class="left-numbers"></div>
-		<div id="left10" class="left-numbers"></div>
-		<div id="left11" class="left-numbers"></div>
-		<div id="left12" class="left-numbers"></div>
-		-->
-	</div>	
+	<div id= "left-numbers-holder"></div>	
  
  	<div id="problems"></div>
    
-  </div><!--/chart_holder-->
+</div><!--/chart_holder-->
   
-  <div style="width: 650px; text-align: center; height: 30px; padding-top: 10px;" >
+<div style="width: 650px; text-align: center; height: 30px; padding-top: 10px;" >
        <input type = "image" src = "images/reveal_btn.jpg"  onclick="showHideDiv()"  />
-  </div>
+</div>
              
   <div style="width: 650px; margin: 10px 0 0 0;"> If you have all the answers right, click the Reveal! button to make the numbers go away.  Click on the button a second time to make the numbers come back.  
   </div>
@@ -113,9 +83,10 @@ function changeBgd(bgdpic) {
 <script src="showhide.js"></script>
 <script src="check-input-answer.js"></script>
 <script src="shuffleArray.js"></script>
-<script src="makeDiv.js"></script>
 
-<script>
+
+<script type="module">
+import {createGrid} from './createGrid';
 const oneToTwelve = [1,2,3,4,5,6,7,8,9,10,11,12];
 const shuffledHorizontal = shuffleArray(oneToTwelve);
 const shuffledVertical = shuffleArray(oneToTwelve);
@@ -125,28 +96,10 @@ const shuffledVertical = shuffleArray(oneToTwelve);
 const shuffled = false;
 const horizontal = shuffled ? shuffledHorizontal : oneToTwelve;
 const vertical = shuffled ? shuffledVertical : oneToTwelve;
-
-function createGrid(rows, columns) {  // pass in 2 parameters for horiz and vertical
-    const problems = document.getElementById('problems');		
-	
-	for (const row of rows) {
-		for (const column of columns) {
-			const element = makeDiv(row, column);
-			problems.appendChild(element);    									
-		}
-	}
-	
-}
-	
-//	const horizontal = shuffledHorizontal;
-//	const vertical = shuffledVertical;
 	
 window.addEventListener('load', function() {
 	createGrid(vertical, horizontal);
 });
-
-// const horizontalNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
-// const verticalNumbers = [1,2,3,4,5,6,7,8,9,10,11,12];
 
 
 const topRow = document.getElementById('top-numbers-holder'); 
@@ -172,9 +125,6 @@ function populateNumberHeaders(container, shuffled) {
 
 
 </script>
-
-
-
 
 
 </body>
