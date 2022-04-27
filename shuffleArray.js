@@ -1,4 +1,7 @@
-function shuffleArray(immutableArray) {
+let x = currentIndex;
+var currentIndex
+
+export default function shuffleArray(immutableArray) {
 	let copy = immutableArray.slice();
 	let currentIndex = copy.length,  randomIndex;
 
@@ -13,7 +16,5 @@ function shuffleArray(immutableArray) {
     	[copy[currentIndex], copy[randomIndex]] = [
       	copy[randomIndex], copy[currentIndex]];
     }
-
-	return copy;
-  
+    return copy;
 }
